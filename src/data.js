@@ -2,76 +2,26 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
-      name: "Beaver Creek",
+      name: "Lane",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: "Aso, Middle School, Aviino",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
-      //   audio:
-      // "https://balkanmp3.ba/uploads/tracks/314985798_205649057_1823000068.mp3",
+        "https://images.genius.com/9595f4f61dbd1a2822d273f604ee37f8.1000x1000x1.jpg",
+      artist: "Dado Polumenta",
+      audio: "https://pogrebnicentarkrsic.com/dp/Dado-Lane.mp3",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
       active: true,
     },
     {
-      name: "Daylight",
+      name: "Rani me",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
-      color: ["#EF8EA9", "#ab417f"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Keep Going",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: "Swørn",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
-      color: ["#CD607D", "#c94043"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Nightfall",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
-      color: ["#EF8EA9", "#ab417f"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Reflection",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
-      artist: "Swørn",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
-      color: ["#CD607D", "#c94043"],
-      id: uuidv4(),
-      active: false,
-    },
-    {
-      name: "Under the City Stars",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: "Aso, Middle School, Aviino",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
+        "https://images.genius.com/1dc70661aa27d7e2ba8a9d744ccc2756.1000x1000x1.png",
+      artist: "Dado Polumenta",
+      audio: "https://pogrebnicentarkrsic.com/dp/DadoPolumenta-Ranime.mp3",
       color: ["#205950", "#2ab3bf"],
       id: uuidv4(),
       active: false,
     },
-    {
-      name: "Kinsfolk",
-      cover: "https://i.scdn.co/image/ab67616d0000b2737d019714ec21ce21d31df352",
-      artist: "Aarigod",
-      id: uuidv4(),
-      active: false,
-      color: ["A0BE5E", "B68E49"],
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=12997",
-    },
+
     //ADD MORE HERE
   ];
 }

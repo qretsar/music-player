@@ -1,0 +1,36 @@
+.event-container {
+  margin-top: 3rem;
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //   justify-content: space-between;
+}
+.event {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #ececec;
+  font-size: 2rem;
+  flex-direction: row;
+  padding: 1rem;
+  margin: 0.1rem;
+  background-color: #8aa899;
+  &:hover {
+    background: #f2d349;
+    color: white;
+    cursor: pointer;
+  }
+}
+.event-detail {
+  align-self: start;
+  padding-right: 2rem;
+}
+.flag {
+  &:hover {
+    transform: scale(1.2);
+  }
+}

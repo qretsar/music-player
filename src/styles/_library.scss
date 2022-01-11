@@ -26,7 +26,7 @@
     width: 40%;
   }
   &:hover {
-    background: lightblue;
+    background: #f2d349;
   }
 }
 .song-description {
@@ -57,7 +57,7 @@
 }
 
 .selected {
-  background: rgb(153, 175, 235);
+  background: #8aa899;
 }
 .active-library {
   transform: translateX(0%);

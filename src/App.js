@@ -6,6 +6,7 @@ import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
 import Nav from "./components/Nav.js";
+import UpcomingEvents from "./containers/UpcomingEvents";
 //Import Utility
 import data from "./data";
 function App() {
@@ -42,6 +43,7 @@ function App() {
     let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
     await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
     if (isPlaying) audioRef.current.play();
+    console.log(audioRef.current.volume);
   };
   return (
     <div className={`App ${libraryStatus && "library-active"}`}>
@@ -74,6 +76,7 @@ function App() {
         src={currentSong.audio}
         onEnded={songEndHandler}
       ></audio>
+      <UpcomingEvents />
     </div>
   );
 }

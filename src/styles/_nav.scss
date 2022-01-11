@@ -8,10 +8,11 @@ nav {
     border: none;
     cursor: pointer;
     border: 2px solid rgb(65, 65, 65);
-    padding: 0.5em;
+    padding: 1em;
+    border-radius: 0.2rem;
     transition: all 0.3 ease;
     &:hover {
-      background: rgb(65, 65, 65);
+      background: #8aa899;
       color: white;
     }
   }

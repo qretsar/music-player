@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPlay,
@@ -18,6 +18,9 @@ function Player({
   setCurrentSong,
   setSongs,
 }) {
+  //State
+  const [volume, setVolume] = useState(0);
+
   const activeLibraryHandler = (nextPrev) => {
     const newSongs = songs.map((song) => {
       if (song.id === nextPrev.id) {
@@ -67,14 +70,19 @@ function Player({
     }
     if (isPlaying) audioRef.current.play();
   };
+  const volumeHandler = (e) => {
+    audioRef.current.volume = e.target.value / 100;
+  };
   //Add the styles
   const trackAnim = {
     transform: `translateX(${songInfo.animationPercentage}%)`,
   };
+  // console.log(audioRef.current.volume);
   return (
     <div className="player">
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
+
         <div
           style={{
             background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
@@ -88,29 +96,43 @@ function Player({
             onChange={dragHandler}
             type="range"
           />
+
           <div style={trackAnim} className="animate-track"></div>
         </div>
         <p>{songInfo.duration ? getTime(songInfo.duration) : "0:00"}</p>
       </div>
-      <div className="play-control">
-        <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-back")}
-          className="skip-back"
-          size="2x"
-          icon={faAngleLeft}
-        />
-        <FontAwesomeIcon
-          onClick={playSongHandler}
-          className="play"
-          size="2x"
-          icon={isPlaying ? faPause : faPlay}
-        />
-        <FontAwesomeIcon
-          onClick={() => skipTrackHandler("skip-forward")}
-          className="skip-forward"
-          size="2x"
-          icon={faAngleRight}
-        />
+
+      <div className="audio-controls">
+        <div className="play-control">
+          <FontAwesomeIcon
+            onClick={() => skipTrackHandler("skip-back")}
+            className="skip-back"
+            size="2x"
+            icon={faAngleLeft}
+          />
+          <FontAwesomeIcon
+            onClick={playSongHandler}
+            className="play"
+            size="2x"
+            icon={isPlaying ? faPause : faPlay}
+          />
+          <FontAwesomeIcon
+            onClick={() => skipTrackHandler("skip-forward")}
+            className="skip-forward"
+            size="2x"
+            icon={faAngleRight}
+          />
+        </div>
+        {/* <input
+          className="volume-slider"
+          style={{
+            background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
+          }}
+          min={0}
+          max={100}
+          onChange={volumeHandler}
+          type="range"
+        /> */}
       </div>
     </div>
   );

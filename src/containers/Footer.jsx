@@ -26,6 +26,11 @@ const Social = (params) => {
           <FaFacebook color="white" size="3rem" />
         </a>
       </div>
+      <p>
+        Designed by{" "}
+        <a href="https://www.instagram.com/johndiamondslife/">John Diamond</a>
+      </p>
+      <p>Copyright © 2022</p>
     </div>
   );
 };

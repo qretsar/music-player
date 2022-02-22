@@ -22,10 +22,11 @@
 }
 .play-control {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  // align-items: center;
   padding: 1rem;
-  width: 30rem;
+  width: 100%;
+
   svg {
     cursor: pointer;
   }
@@ -63,6 +64,9 @@ input[type="range"]::-moz-slider-thumb {
 }
 .audio-controls {
   display: flex;
+  padding: 2rem;
+  width: 100%;
+  align-items: center;
   flex-direction: column;
 }
 .volume-slider {
@@ -77,6 +81,8 @@ input[type="range"]::-moz-slider-thumb {
     width: 90%;
   }
   .play-control {
-    width: 60%;
+    // width: 50%;
+    justify-content: space-around;
+    align-items: center;
   }
 }

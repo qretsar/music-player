@@ -1,0 +1,60 @@
+.form-container {
+  padding-top: 2rem;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-content: center;
+  padding: 2rem;
+  box-shadow: 0 1rem 1rem #5b5c5c6b;
+
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.form {
+  //   flex: 5;
+  display: flex;
+  margin: auto;
+  width: 80%;
+  flex-direction: column;
+  color: #646464;
+  input,
+  textarea {
+    border: 0.1rem solid #3a3a3a36;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+  }
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 0.5px solid #d4af37;
+  }
+  button {
+    margin-top: 1rem;
+    background: #d4af37;
+    height: 2rem;
+    border-radius: 0.2rem;
+    border: none;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+.heading {
+  margin-top: 2rem;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 100%;
+  }
+  .form {
+    width: 95%;
+  }
+}

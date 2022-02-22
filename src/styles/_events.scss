@@ -1,36 +1,113 @@
 .event-container {
   margin-top: 3rem;
   min-height: 10vh;
-  width: 100%;
+  min-width: 80%;
+  max-width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 0.5rem;
+  // box-shadow: 0 1rem 1rem rgb(91, 92, 92);
+  box-shadow: 0 1rem 1rem #5b5c5c6b;
+  // font-size: 1rem;
+  background-color: #ffffff;
+  padding-bottom: 3rem;
 
   //   justify-content: space-between;
 }
 .event {
-  width: 100%;
+  width: 80%;
   display: flex;
-  justify-content: center;
-  align-content: center;
-  color: #ececec;
-  font-size: 2rem;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #eee;
   padding: 1rem;
   margin: 0.1rem;
-  background-color: #8aa899;
+  background-color: #d4af37;
+  border-radius: 0.2rem;
+  // box-shadow: 1rem 0.2rem 5rem rgba(91, 92, 92, 0.5);
   &:hover {
-    background: #f2d349;
+    background: #aa9122;
     color: white;
     cursor: pointer;
   }
 }
+.eventer {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2rem;
+  color: #3f3f3f;
+}
+.names {
+  margin-top: 1rem;
+}
 .event-detail {
-  align-self: start;
+  // justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  // align-self: center;
   padding-right: 2rem;
+  // box-shadow: 0 0.2rem 0.5rem rgb(91, 92, 92);
+}
+.flagic {
+  width: 3rem;
 }
 .flag {
   &:hover {
     transform: scale(1.2);
+  }
+}
+.club,
+.location,
+.datum,
+.distance,
+.flag {
+  width: 15%;
+  // background-color: #fa0000;
+}
+
+@media screen and (max-width: 768px) {
+  .event-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .event {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .event-detail {
+    font-size: 1rem;
+    align-self: start;
+    // padding-right: 2rem;
+    width: 100%;
+  }
+  .flagic {
+    width: 3rem;
+  }
+
+  .club,
+  .location,
+  .datum,
+  .distance,
+  .flag {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    // background-color: #fa0000;
+  }
+
+  .eventer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 90%;
   }
 }

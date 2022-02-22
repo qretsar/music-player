@@ -9,6 +9,8 @@ import Nav from "./components/Nav.js";
 import UpcomingEvents from "./containers/UpcomingEvents";
 //Import Utility
 import data from "./data";
+import ContactForm from "./containers/ContactForm";
+import Footer from "./containers/Footer";
 function App() {
   //State
   //when data() runs it returns all array of objects from util.js
@@ -77,6 +79,8 @@ function App() {
         onEnded={songEndHandler}
       ></audio>
       <UpcomingEvents />
+      <ContactForm />
+      <Footer />
     </div>
   );
 }

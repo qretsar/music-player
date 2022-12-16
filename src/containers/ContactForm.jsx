@@ -3,6 +3,7 @@ import React from "react";
 export default function ContactForm() {
   return (
     <>
+      <hr></hr>
       <h1 className="heading">Kontaktirajte nas</h1>
       <div className="form-container" id="contact">
         <form className="form">
@@ -32,6 +33,7 @@ export default function ContactForm() {
             placeholder="Vaša poruka..."
             className="message"
             name="message"
+            rows="6"
           />
 
           <button type="submit" className="send">

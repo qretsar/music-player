@@ -51,18 +51,31 @@ function App() {
     <div className={`App ${libraryStatus && "library-active"}`}>
       <Nav libraryStatus={libraryStatus} setlibraryStatus={setLibraryStatus} />
 
-      <Song currentSong={currentSong} />
-      <Player
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        setIsPlaying={setIsPlaying}
-        currentSong={currentSong}
-        setSongInfo={setSongInfo}
-        songInfo={songInfo}
-        songs={songs}
-        setCurrentSong={setCurrentSong}
-        setSongs={setSongs}
-      />
+      <div className="front-page-wrapper">
+        <Song currentSong={currentSong} />
+        <audio
+          onTimeUpdate={timeUpdateHandler}
+          onLoadedMetadata={timeUpdateHandler}
+          ref={audioRef}
+          src={currentSong.audio}
+          onEnded={songEndHandler}
+        ></audio>
+        <Player
+          audioRef={audioRef}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          currentSong={currentSong}
+          setSongInfo={setSongInfo}
+          songInfo={songInfo}
+          songs={songs}
+          setCurrentSong={setCurrentSong}
+          setSongs={setSongs}
+        />
+
+        <UpcomingEvents />
+        <ContactForm />
+      </div>
+
       <Library
         songs={songs}
         setCurrentSong={setCurrentSong}
@@ -71,15 +84,7 @@ function App() {
         setSongs={setSongs}
         libraryStatus={libraryStatus}
       />
-      <audio
-        onTimeUpdate={timeUpdateHandler}
-        onLoadedMetadata={timeUpdateHandler}
-        ref={audioRef}
-        src={currentSong.audio}
-        onEnded={songEndHandler}
-      ></audio>
-      <UpcomingEvents />
-      <ContactForm />
+
       <Footer />
     </div>
   );

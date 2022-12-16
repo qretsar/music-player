@@ -85,7 +85,7 @@ function Player({
 
         <div
           style={{
-            background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
+            background: "#e3358c",
           }}
           className="track"
         >

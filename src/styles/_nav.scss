@@ -1,40 +1,65 @@
 nav {
-  min-height: 10vh;
+  min-height: 12vh;
   display: flex;
-  justify-content: flex-end;
-  // padding: 2rem;
+  // justify-content: flex-end;
   align-items: center;
-  background-color: #d4af37;
-  // border-radius: 0.5rem;
-  // box-shadow: 0 1rem 1rem rgb(91, 92, 92);
-  box-shadow: 0 1rem 1rem #5b5c5c6b;
-
+  background-color: #078;
+  // box-shadow: 0 4px 6px #5b5c5c6b;
+  box-shadow: 12px 20px 57px 8px rgba(0,0,0,0.41);
+-webkit-box-shadow: 12px 20px 57px 8px rgba(0,0,0,0.41);
+-moz-box-shadow: 12px 20px 57px 8px rgba(0,0,0,0.41);
+  .nav-content-wrapper {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 65%;
+  }
   .logo {
     display: flex;
-    flex: 3;
-    justify-content: center; // width: 50%;
-    // background-color: red;
+    flex: 1;
   }
   .icon {
     padding: 0 0.5rem 0 0.1rem;
   }
+  .headline {
+    flex: 3;
+    color: white;
+    justify-content: center;
+    align-items: bottom;
+    bottom: 0;
+    h1 {
+      color: white;
+    }
+  }
   .buttons {
     display: flex;
-    flex: 2;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // flex: 2;
+    // padding: 0px;
+    // margin: 0px;
+    align-items: center;
+    text-align: center;
   }
+
   button {
     background: transparent;
-    background: #aa9122;
-    border: none;
+    // background: #aa9122;
+    // border: none;
     cursor: pointer;
     border: 2px solid rgb(255, 255, 255);
-    margin-right: 1rem;
-    padding: 0.6rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
     border-radius: 0.2rem;
     transition: all 0.3 ease;
-    color: white;
+    color: rgb(255, 255, 255);
     &:hover {
-      background: #161616ab;
+      background: #e3e3e354;
       color: white;
     }
   }
@@ -47,12 +72,26 @@ nav {
     // position: sticky;
     button {
       text-align: center;
-      z-index: 10;
+      z-index: 20;
       font-size: 0.5rem;
       width: 5rem;
-      height: 2rem;
+      background: #078;
+      // background: transparent;
+      &:hover {
+        background: #078;
+        color: white;
+      }
+      // height: 2rem;
+      align-items: center;
     }
     color: red;
+  }
+  .nav-content-wrapper {
+    // margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    min-width: 100%;
   }
   .icon {
     // visibility: none;

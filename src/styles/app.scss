@@ -14,15 +14,37 @@ body {
 h3,
 h4 {
   font-weight: 400;
-  color: rgb(100, 100, 100);
+  // color: rgb(100, 100, 100);
+  color: #646464;
 }
 .App {
   transition: all 0.5s ease;
+  background-color: #f7f7f7;
 }
 .library-active {
-  margin-left: 30%;
+  // margin-left: 30%;
 }
-
+hr {
+  width: 10%;
+  margin: 0 auto;
+}
+.front-page-wrapper {
+  max-width: 70%;
+  margin: auto;
+  background-color: white;
+  margin-top: 4rem;
+  padding: 0 4rem 0 4rem;
+}
+@media screen and (max-width: 768px) {
+  .front-page-wrapper {
+    max-width: 100%;
+    min-width: 100%;
+    // margin: auto;
+    background-color: white;
+    // margin-top: 4rem;
+    padding: 0 0rem 0 0rem;
+  }
+}
 @import "./song";
 @import "./player";
 @import "./library";
@@ -30,3 +52,4 @@ h4 {
 @import "./events";
 @import "./contactform";
 @import "./footer";
+@import "./frontpage";

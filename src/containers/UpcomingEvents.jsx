@@ -39,7 +39,9 @@ export default function UpcomingEvents() {
   }, []);
   return (
     <div href="#services" className="event-container">
-      <h1>Naredna gostovanja</h1>
+      <hr></hr>
+
+      <h1 className="heading">Naredna gostovanja</h1>
       <div className="eventer">
         {/* <p className="event-detail flag">{getFlag(date)}</p> */}
 

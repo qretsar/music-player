@@ -1,4 +1,5 @@
 .library {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,6 +13,11 @@
   opacity: 0;
   h2 {
     padding: 2rem;
+    // color: red;
+  }
+  h3,
+  h4 {
+    color: gray;
   }
 }
 
@@ -25,7 +31,8 @@
     width: 40%;
   }
   &:hover {
-    background: #ffd000;
+    background: #e3e3e3;
+    color: white;
   }
 }
 .song-description {
@@ -40,7 +47,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  scrollbar-color: #e3358c;
 }
 *::-webkit-scrollbar {
   width: 5px;
@@ -50,13 +57,22 @@
   //   width: 5px;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
+  background-color: #078;
   border-radius: 20px;
   border: transparent;
 }
 
 .selected {
-  background: #d4af37;
+  // background: #d4af37;
+  background: #078;
+  &:hover {
+    background: #078;
+    // color: white;
+  }
+  h3,
+  h4 {
+    color: white;
+  }
   // background: rgb(112, 198, 255);
 }
 .active-library {
